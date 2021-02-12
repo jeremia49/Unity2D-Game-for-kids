@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Controller : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class Controller : MonoBehaviour
     public GameObject KotakSehat;
     public GameObject KotakBuruk;
 
-    public TextMeshProUGUI ScoreText;
+    public GameObject CekScoreButton;
 
 
     //public int[] listMakananSehat;
@@ -27,12 +28,48 @@ public class Controller : MonoBehaviour
     float tolerance = 1;
     float boxtolerance = 3f;
 
+    struct Position
+    {
+        public float posx;
+        public float posy;
+        public float posz;
 
-    // Start is called before the first frame update
-    void Start()
+
+        public Position(float x, float y, float z)
+        {
+            this.posx = x;
+            this.posy = y;
+            this.posz = z;
+        }
+    }
+
+
+
+    void Awake()
     {
         Screen.orientation = ScreenOrientation.LandscapeLeft;
+
+        Position[] OriginalPosition = new Position[listobject.Length];
+
+        for (int i = 0; i < listobject.Length; i++)
+        {
+            GameObject box = listobject[i].gameObject;
+            Position TempPos = new Position(box.transform.position.x, box.transform.position.y, box.transform.position.z);
+            OriginalPosition[i] = TempPos;
+        }
+
+        reshuffle(OriginalPosition);
+
+        for (int i = 0; i < listobject.Length; i++)
+        {
+            Position chPos = OriginalPosition[i];
+            GameObject box = listobject[i].gameObject;
+            box.transform.position = new Vector3(chPos.posx, chPos.posy, chPos.posz);
+        }
+
+        Debug.Log(OriginalPosition);
     }
+
 
     // Update is called once per frame
     void Update()
@@ -68,7 +105,7 @@ public class Controller : MonoBehaviour
                     {
                         GameObject box = listobject[lastindex].gameObject;
                         Debug.Log("Moving Box " + box.GetComponent<Identifier>().IDBOX.ToString());
-                        box.transform.position = new Vector3(touchPos.x - deltaX, touchPos.y ,-8f);
+                        box.transform.position = new Vector3(touchPos.x - deltaX, touchPos.y, -8.0f);
                     }
                     break;
                 case TouchPhase.Ended:
@@ -81,32 +118,67 @@ public class Controller : MonoBehaviour
         }
 
         int benar = 0;
+        int jawab = 0;
 
         for (int i = 0; i < listobject.Length; i++)
         {
             GameObject box = listobject[i].gameObject;
             int indikator = box.GetComponent<Identifier>().Indikator;
 
-            if (indikator == 1)
+
+            if ((box.transform.position.x >= KotakBuruk.transform.position.x - boxtolerance && box.transform.position.x <= KotakBuruk.transform.position.x + boxtolerance && box.transform.position.y >= KotakBuruk.transform.position.y - boxtolerance && box.transform.position.y <= KotakBuruk.transform.position.y + boxtolerance) || (box.transform.position.x >= KotakSehat.transform.position.x - boxtolerance && box.transform.position.x <= KotakSehat.transform.position.x + boxtolerance && box.transform.position.y >= KotakSehat.transform.position.y - boxtolerance && box.transform.position.y <= KotakSehat.transform.position.y + boxtolerance))
             {
-                if (box.transform.position.x >= KotakBuruk.transform.position.x - boxtolerance && box.transform.position.x <= KotakBuruk.transform.position.x + boxtolerance && box.transform.position.y >= KotakBuruk.transform.position.y - boxtolerance && box.transform.position.y <= KotakBuruk.transform.position.y + boxtolerance)
+                jawab++;
+
+                if (indikator == 1)
                 {
-                    benar += 1;
+                    if (box.transform.position.x >= KotakBuruk.transform.position.x - boxtolerance && box.transform.position.x <= KotakBuruk.transform.position.x + boxtolerance && box.transform.position.y >= KotakBuruk.transform.position.y - boxtolerance && box.transform.position.y <= KotakBuruk.transform.position.y + boxtolerance)
+                    {
+                        benar += 1;
+                    }
+
                 }
-            }
-            else if (indikator == 2)
-            {
-                if (box.transform.position.x >= KotakSehat.transform.position.x - boxtolerance && box.transform.position.x <= KotakSehat.transform.position.x + boxtolerance && box.transform.position.y >= KotakSehat.transform.position.y - boxtolerance && box.transform.position.y <= KotakSehat.transform.position.y + boxtolerance)
+                else if (indikator == 2)
                 {
-                    benar += 1;
+                    if (box.transform.position.x >= KotakSehat.transform.position.x - boxtolerance && box.transform.position.x <= KotakSehat.transform.position.x + boxtolerance && box.transform.position.y >= KotakSehat.transform.position.y - boxtolerance && box.transform.position.y <= KotakSehat.transform.position.y + boxtolerance)
+                    {
+                        benar += 1;
+                    }
                 }
             }
         }
         Score = (benar * 100f / listobject.Length);
+        PlayerPrefs.SetFloat("score", Score);
 
-        string txtScore = "Score : " + Score.ToString();
-        ScoreText.SetText(txtScore);
-        
+        if (jawab == listobject.Length) {
+            CekScoreButton.SetActive(true);
+        }
+        else {
+            CekScoreButton.SetActive(false);
+        }
+
+
 
     }
+
+    void reshuffle(Position[] texts)
+    {
+        // Knuth shuffle algorithm :: courtesy of Wikipedia :)
+        for (int t = 0; t < texts.Length; t++)
+        {
+            Position tmp = texts[t];
+            int r = Random.Range(t, texts.Length);
+            texts[t] = texts[r];
+            texts[r] = tmp;
+        }
+    }
+
+
+    public void CheckScore()
+    {
+        SceneManager.LoadSceneAsync("Result");
+    }
 }
+
+
+

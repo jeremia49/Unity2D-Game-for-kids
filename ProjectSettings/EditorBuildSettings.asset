@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Materi_IPA.unity
     guid: fda58494b9a5f6841921b4a3b3fafe17
   - enabled: 1
+    path: Assets/Scenes/Loading.unity
+    guid: f825ea91d6ae3e2498a1f7a79012a9bd
+  - enabled: 1
     path: Assets/Scenes/Makanan.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1

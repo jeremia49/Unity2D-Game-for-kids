@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PortraitOrt : MonoBehaviour
 {
-    void Start()
+    void Awake()
     {
         Screen.orientation = ScreenOrientation.Portrait;
     }

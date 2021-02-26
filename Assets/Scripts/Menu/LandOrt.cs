@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LandOrt : MonoBehaviour
 {
-    void Start()
+    void Awake()
     {
         Screen.orientation = ScreenOrientation.LandscapeRight;
     }

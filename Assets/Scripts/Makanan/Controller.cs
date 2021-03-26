@@ -10,6 +10,7 @@ public class Controller : MonoBehaviour
 
     public GameObject KotakSehat;
     public GameObject KotakBuruk;
+    public GameObject KotakHint;
 
     public GameObject CekScoreButton;
 
@@ -27,6 +28,8 @@ public class Controller : MonoBehaviour
 
     float tolerance = 1;
     float boxtolerance = 3f;
+
+    float hinttolerance = 2f;
 
     struct Position
     {
@@ -65,7 +68,7 @@ public class Controller : MonoBehaviour
             box.transform.position = new Vector3(chPos.posx, chPos.posy, chPos.posz);
         }
 
-        Debug.Log(OriginalPosition);
+        //Debug.Log(OriginalPosition);
     }
 
 
@@ -92,8 +95,8 @@ public class Controller : MonoBehaviour
                             lastindex = i;
                             lastidbox = box.GetComponent<Identifier>().IDBOX;
                             moveAllowed = true;
-                            Debug.Log("Got Clicked");
-                            Debug.Log("BOX ID : " + box.GetComponent<Identifier>().IDBOX.ToString());
+                           // Debug.Log("Got Clicked");
+                           // Debug.Log("BOX ID : " + box.GetComponent<Identifier>().IDBOX.ToString());
                             break;
                         }
                     }
@@ -102,8 +105,76 @@ public class Controller : MonoBehaviour
                     if (moveAllowed && lastidbox != 0 && lastindex != -1)
                     {
                         GameObject box = listobject[lastindex].gameObject;
-                        Debug.Log("Moving Box " + box.GetComponent<Identifier>().IDBOX.ToString());
+                       // Debug.Log("Moving Box " + box.GetComponent<Identifier>().IDBOX.ToString());
                         box.transform.position = new Vector3(touchPos.x - deltaX, touchPos.y, -8.0f);
+
+                        if (box.transform.position.x >= KotakHint.transform.position.x - hinttolerance && box.transform.position.x <= KotakHint.transform.position.x + hinttolerance && box.transform.position.y >= KotakHint.transform.position.y - hinttolerance && box.transform.position.y <= KotakHint.transform.position.y + hinttolerance)
+                        {
+
+                            int indikator = box.GetComponent<Identifier>().Indikator;
+                            int childcount = KotakHint.transform.childCount;
+                            if (indikator == 1)
+                            {
+                                for (int i = 0; i < childcount; i++)
+                                {
+                                    GameObject childcomp = KotakHint.transform.GetChild(i).gameObject;
+                                    if (childcomp.transform.name == "Normal")
+                                    {
+                                        childcomp.SetActive(false);
+                                    }
+                                    else if (childcomp.transform.name == "Eat")
+                                    {
+                                        childcomp.SetActive(false);
+                                    }
+                                    else
+                                    {
+                                        childcomp.SetActive(true);
+                                    }
+                                }
+                            }
+                            else if (indikator == 2)
+                            {
+                                for (int i = 0; i < childcount; i++)
+                                {
+                                    GameObject childcomp = KotakHint.transform.GetChild(i).gameObject;
+                                    if (childcomp.transform.name == "Normal")
+                                    {
+                                        childcomp.SetActive(false);
+                                    }
+                                    else if (childcomp.transform.name == "Eat")
+                                    {
+                                        childcomp.SetActive(true);
+                                    }
+                                    else
+                                    {
+                                        childcomp.SetActive(false);
+                                    }
+                                }
+                            }
+
+                        }
+                        else
+                        {
+                            int childcount = KotakHint.transform.childCount;
+                            for (int i = 0; i < childcount; i++)
+                            {
+                                GameObject childcomp = KotakHint.transform.GetChild(i).gameObject;
+                                if (childcomp.transform.name == "Normal")
+                                {
+                                    childcomp.SetActive(true);
+                                }
+                                else if (childcomp.transform.name == "Eat")
+                                {
+                                    childcomp.SetActive(false);
+                                }
+                                else
+                                {
+                                    childcomp.SetActive(false);
+                                }
+                            }
+                            
+                        }
+
                     }
                     break;
                 case TouchPhase.Ended:

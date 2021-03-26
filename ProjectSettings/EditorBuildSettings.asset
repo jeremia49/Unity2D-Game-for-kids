@@ -15,15 +15,48 @@ EditorBuildSettings:
     path: Assets/Scenes/Materi.unity
     guid: 53e77ad8e39ed0249b665ead01522b5c
   - enabled: 1
-    path: Assets/Scenes/Materi_IPA.unity
+    path: Assets/Scenes/Pelajaran/IPA/Video/V_IPA_1.unity
+    guid: e9ad49ca091996947849d20045e6ac07
+  - enabled: 1
+    path: Assets/Scenes/Pelajaran/SBdP/Materi_SBdP.unity
     guid: fda58494b9a5f6841921b4a3b3fafe17
   - enabled: 1
     path: Assets/Scenes/Loading.unity
     guid: f825ea91d6ae3e2498a1f7a79012a9bd
   - enabled: 1
-    path: Assets/Scenes/Makanan.unity
+    path: Assets/Scenes/Pelajaran/IPA/Game/Makanan.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Result.unity
     guid: 360c9cfe0b1f0ce479f67db34ad2d8c1
+  - enabled: 1
+    path: Assets/Scenes/Pelajaran/SBdP/Game/Game_Mewarnai_1.unity
+    guid: 704b29f7ac98eb9409588536d819452c
+  - enabled: 1
+    path: Assets/Scenes/Pelajaran/SBdP/Game/Game_Mewarnai_2.unity
+    guid: a066be1968f44514fa325b53264fb59a
+  - enabled: 1
+    path: Assets/Scenes/Pelajaran/SBdP/Game/Game_Mewarnai_3.unity
+    guid: 5edec16e81f59324383fdc410f8ad88d
+  - enabled: 1
+    path: Assets/Scenes/KompetensiInti/KI.unity
+    guid: e8f78e016e5d59b49b08ea681e14ebb2
+  - enabled: 1
+    path: Assets/Scenes/KompetensiDasar/KD.unity
+    guid: 55249069662395c4b85294077090ede1
+  - enabled: 1
+    path: Assets/Scenes/TujuanPembelajaran/TJ.unity
+    guid: d5fb52fa7fc068842bbfe88cdd836a23
+  - enabled: 1
+    path: Assets/Scenes/Profil/Profil.unity
+    guid: 5d7b29d8473902f40b0ebde6e009fd0e
+  - enabled: 1
+    path: Assets/Scenes/Pelajaran/IPA/Materi_IPA.unity
+    guid: b6f32abc61460ea4594d0cdda96d403d
+  - enabled: 1
+    path: Assets/Scenes/Pelajaran/SBdP/Video/V_SBP_1.unity
+    guid: d26bfbe517148f7419f7932a103bf033
+  - enabled: 1
+    path: Assets/Scenes/Pelajaran/SBdP/Video/V_SBP_2.unity
+    guid: 6367e524b8e54bd4d9e499b0f196ec69
   m_configObjects: {}

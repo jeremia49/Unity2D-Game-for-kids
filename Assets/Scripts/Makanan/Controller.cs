@@ -47,8 +47,6 @@ public class Controller : MonoBehaviour
 
     void Awake()
     {
-        Screen.orientation = ScreenOrientation.LandscapeLeft;
-
         Position[] OriginalPosition = new Position[listobject.Length];
 
         for (int i = 0; i < listobject.Length; i++)

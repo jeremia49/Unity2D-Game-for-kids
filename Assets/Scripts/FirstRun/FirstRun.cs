@@ -25,23 +25,11 @@ public class FirstRun : MonoBehaviour
         else
         {
             PlayerName = Inputtext.text;
+            PlayerPrefs.SetString("playerName", PlayerName);
             SceneManager.LoadSceneAsync("Menu");
         }
     }
 
-    void OnDisable()
-    {
-        PlayerPrefs.SetString("playerName", PlayerName);
-    }
-
-    void OnEnable()
-    {
-        PlayerName = PlayerPrefs.GetString("playerName");
-        if(PlayerName != "")
-        {
-            SceneManager.LoadSceneAsync("Menu");
-        }
-    }
 
 
 }

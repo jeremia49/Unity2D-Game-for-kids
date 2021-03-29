@@ -724,10 +724,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 5050a41a-1580-4a6b-96ea-aa9313bccd64
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: Unity Game
+  organizationId: jeremia49
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

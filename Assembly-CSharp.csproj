@@ -685,6 +685,9 @@
  <Reference Include="Unity.TextMeshPro">
  <HintPath>C:/Users/jerem/Unity-PGSD/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
+ <Reference Include="Nobi.UiRoundedCorners">
+ <HintPath>C:/Users/jerem/Unity-PGSD/Library/ScriptAssemblies/Nobi.UiRoundedCorners.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>C:/Users/jerem/Unity-PGSD/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>

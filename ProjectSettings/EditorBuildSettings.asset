@@ -98,4 +98,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pelajaran/SBdP/Game/CekBatik.unity
     guid: 7a04b822d98af8b4881fd7ac3b645634
+  - enabled: 1
+    path: Assets/Scenes/PetunjukPenggunaan/PP.unity
+    guid: 198b57c53032c4e47b12dc7a10a9bc75
+  - enabled: 1
+    path: Assets/Scenes/PetunjukPenggunaan/PP2.unity
+    guid: d52f9bf92a75096478273b8d318cc20e
+  - enabled: 1
+    path: Assets/Scenes/PetunjukPenggunaan/PP3.unity
+    guid: 51369008f6ea374468cba3a9f937e88a
+  - enabled: 1
+    path: Assets/Scenes/PetunjukPenggunaan/PP4.unity
+    guid: 3acaead902eb6334e96dde44c5f5b007
   m_configObjects: {}

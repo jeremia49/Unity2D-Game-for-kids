@@ -47,11 +47,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/KompetensiDasar/KD.unity
     guid: 55249069662395c4b85294077090ede1
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Profil/Profil.unity
+    path: Assets/Scenes/Profil/Profil2.unity
     guid: 5d7b29d8473902f40b0ebde6e009fd0e
   - enabled: 1
     path: Assets/Scenes/Pelajaran/IPA/Materi_IPA.unity
@@ -60,32 +57,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Pelajaran/SBdP/Video/V_SBP_1.unity
     guid: d26bfbe517148f7419f7932a103bf033
   - enabled: 1
-    path: Assets/Scenes/Pelajaran/SBdP/Video/V_SBP_2.unity
-    guid: 6367e524b8e54bd4d9e499b0f196ec69
-  - enabled: 1
     path: Assets/Scenes/Indikator/Indikator.unity
     guid: 4fad1ee4243d2d44ca7613bcc69a7447
   - enabled: 1
     path: Assets/Scenes/TujuanPembelajaran/TJ.unity
     guid: 50b985b6370934540a26e2ba5c2ce248
   - enabled: 1
-    path: Assets/Scenes/TujuanPembelajaran/TJ2.unity
-    guid: a7a4dcf12182a7f47b6384419b1c6827
-  - enabled: 1
-    path: Assets/Scenes/Pelajaran/IPA/AYOMENGAMATI/AYOMENGAMATI.unity
-    guid: f4fb8ca19ddb9a342ba235ee37ba0b62
-  - enabled: 1
-    path: Assets/Scenes/Pelajaran/IPA/AYOMENGAMATI/AYOMENGAMATI2.unity
-    guid: 018135f1701b3db4aa0d00f75cd868ce
-  - enabled: 1
-    path: Assets/Scenes/Pelajaran/IPA/AYOMENGAMATI/AYOMENGAMATI3.unity
-    guid: 4b7b677f65bc66b4eb2adb13d91b9f94
-  - enabled: 1
     path: Assets/Scenes/Pelajaran/SBdP/Materi_SBdP.unity
     guid: ed8faf52adcd10d4089611aa5b9efd78
-  - enabled: 1
-    path: Assets/Scenes/Pelajaran/SBdP/AYOBERLATIH/AYOBERLATIH_SBdP.unity
-    guid: 4ff045c1a484b514eb7bbdcaa912cac7
   - enabled: 1
     path: Assets/Scenes/Pelajaran/Indo/Materi_Indo.unity
     guid: a88993901e814504d8f1cc82a6d18a97
@@ -102,12 +81,15 @@ EditorBuildSettings:
     path: Assets/Scenes/PetunjukPenggunaan/PP.unity
     guid: 198b57c53032c4e47b12dc7a10a9bc75
   - enabled: 1
+    path: Assets/Scenes/Pelajaran/IPA/AYOMENGAMATI/AYOMENGAMATI.unity
+    guid: a9e835cb73f474f4da6b844f312f44ab
+  - enabled: 1
     path: Assets/Scenes/PetunjukPenggunaan/PP2.unity
-    guid: d52f9bf92a75096478273b8d318cc20e
+    guid: 332e07327b07cc542bb0439b0514331c
   - enabled: 1
-    path: Assets/Scenes/PetunjukPenggunaan/PP3.unity
-    guid: 51369008f6ea374468cba3a9f937e88a
+    path: Assets/Scenes/Profil/Profil.unity
+    guid: 3a122d63a41c6fe41bd5cae84b7fdfb9
   - enabled: 1
-    path: Assets/Scenes/PetunjukPenggunaan/PP4.unity
-    guid: 3acaead902eb6334e96dde44c5f5b007
+    path: Assets/Scenes/Pelajaran/SBdP/AYOBERLATIH/AYOBERLATIH_SBdP.unity
+    guid: bfc45c5166d5c024f8ece9c6f5aaa1c2
   m_configObjects: {}

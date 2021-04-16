@@ -9,6 +9,7 @@ public class Loader : MonoBehaviour
 {
     public Image progressbar;
     public TextMeshProUGUI loadingtext;
+    public string Scene;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,7 @@ public class Loader : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         StartCoroutine(PlayText());
 
-        AsyncOperation loading = SceneManager.LoadSceneAsync("Makanan");
+        AsyncOperation loading = SceneManager.LoadSceneAsync(Scene);
         while (loading.progress < 1)
         {
             progressbar.fillAmount = loading.progress;

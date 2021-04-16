@@ -8,6 +8,9 @@ public class ResultLoader : MonoBehaviour
 {
     public TextMeshProUGUI TextScore;
     public TextMeshProUGUI Textnama;
+    public GameObject ImageSenang;
+    public GameObject ImageSedih;
+
 
     float PlayerScore;
     string PlayerName;
@@ -18,5 +21,14 @@ public class ResultLoader : MonoBehaviour
         Textnama.text = "Score\n" + PlayerName + ":\n";
         PlayerScore = PlayerPrefs.GetFloat("score");
         TextScore.text = PlayerScore.ToString();
+
+        if(PlayerScore < 70f)
+        {
+            ImageSedih.SetActive(true);
+        }
+        else
+        {
+            ImageSenang.SetActive(true);
+        }
     }
 }

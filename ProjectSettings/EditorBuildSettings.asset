@@ -75,9 +75,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Pelajaran/Indo/AYOBERLATIH_INDO.unity
     guid: b48412e495c56414cbbfd1cb1cd01610
   - enabled: 1
-    path: Assets/Scenes/Pelajaran/SBdP/Game/CekBatik.unity
-    guid: 7a04b822d98af8b4881fd7ac3b645634
-  - enabled: 1
     path: Assets/Scenes/PetunjukPenggunaan/PP.unity
     guid: 198b57c53032c4e47b12dc7a10a9bc75
   - enabled: 1

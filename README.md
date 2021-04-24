@@ -1,3 +1,3 @@
-# Unity-PGSD
+# Simple Unity Game for Kids
 
-Dibuat dengan Unity , h3h3h3
+Dibuat dengan Unity

@@ -1,19 +1,22 @@
 fileFormatVersion: 2
-guid: 1241a1b6e21bb91408cdb0b0cfb765c8
+guid: 2fc59db403e5d614789ab33a88f9c193
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7256317209665240663
-    second: batik3-01_0
+      213: 774088096968556514
+    second: nias_0
   - first:
-      213: 1777707404755599776
-    second: batik3-01_1
+      213: 1879407392734014936
+    second: nias_1
   - first:
-      213: 2699316778845427240
-    second: batik3-01_2
+      213: 3882209491445466119
+    second: nias_2
   - first:
-      213: 4543714446530472957
-    second: batik3-01_3
+      213: 2241530648051407587
+    second: nias_3
+  - first:
+      213: -6747515247690522009
+    second: nias_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -58,7 +61,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 512
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -115,13 +118,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: batik3-01_0
+      name: nias_0
       rect:
         serializedVersion: 2
-        x: 180
-        y: 2469
-        width: 2155
-        height: 1039
+        x: 167
+        y: 1085
+        width: 387
+        height: 342
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,71 +132,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75e76ab7e0e93b460800000000000000
-      internalID: 7256317209665240663
+      spriteID: 2ef3bacd50d1eba00800000000000000
+      internalID: 774088096968556514
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: batik3-01_1
+      name: nias_1
       rect:
         serializedVersion: 2
-        x: 48
-        y: 1371
-        width: 952
-        height: 1007
+        x: 722
+        y: 1076
+        width: 360
+        height: 340
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a10a07477faba810800000000000000
-      internalID: 1777707404755599776
+      spriteID: 8dd6720f01ff41a10800000000000000
+      internalID: 1879407392734014936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: batik3-01_2
+      name: nias_2
       rect:
         serializedVersion: 2
-        x: 1283
-        y: 1444
-        width: 1042
-        height: 879
+        x: 1106
+        y: 1079
+        width: 353
+        height: 326
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 826555b0f46e57520800000000000000
-      internalID: 2699316778845427240
+      spriteID: 704c141b6f060e530800000000000000
+      internalID: 3882209491445466119
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: batik3-01_3
+      name: nias_4
       rect:
         serializedVersion: 2
-        x: 409
-        y: 191
-        width: 1446
-        height: 1114
+        x: 1499
+        y: 1089
+        width: 356
+        height: 316
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dfb624a27348e0f30800000000000000
-      internalID: 4543714446530472957
+      spriteID: 762efd0d1a20c52a0800000000000000
+      internalID: -6747515247690522009
       vertices: []
       indices: 
       edges: []

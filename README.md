@@ -1,3 +1,9 @@
 # Simple Unity Game for Kids
 
-Dibuat dengan Unity
+Feature :
+- Matching Game
+- Coloring
+- Watch Video(s)
+- etc.
+
+Made with unity.
